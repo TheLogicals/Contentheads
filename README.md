@@ -7,7 +7,8 @@
 * [Screenshots](#screenshots)
 
 ## General info
-This project is providing usere news from all over world and giving them option to save news.
+This project is for providing users news from all over world with the help of API and giving them option to save news.
+Saved news can be viewed from My Articles.
 
 ## Screenshots
 ![Screenshot (22)](https://user-images.githubusercontent.com/63574672/93490910-b345f000-f926-11ea-8195-d827cf34cb6c.png)
