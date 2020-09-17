@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+
+<h1 style="text-align: center ;"> Top Stories </h1>
+
+
+<% blogs.forEach(function(blog) {%>
+    <div style="margin-bottom: 50px;">
+        <div style="width:90%;float:left;">
+            <h2 > <%= blog.title %> </h2>
+            <p> 
+                <%= blog.description %>  ....   
+                <a href= <%= blog.url %> >More</a> 
+                <form action="/Save" method="post">
+                    <input type="submit" name="upvote" value="save" />
+                    <input  style="visibility: hidden;" name = "url" value = <%= blog.url %> >
+                    <input  style="visibility: hidden;" name = "title" value= <%= blog.title %> >
+                    <input  style="visibility: hidden;" name = "description" value= <%= blog.description %> >
+                    <input  style="visibility: hidden;" name = "urlToImage" value= <%= blog.urlToImage %> >
+                </form>
+            </p> 
+        </div>
+        <div style="width:10%;float:left;margin-top: 30px;">
+            <img src=<%= blog.urlToImage %> alt="Girl in a jacket" width="120" height="120">
+        </div>
+   </div>  
+<% }); %>
+
+<%- include("partials/footer") -%>
